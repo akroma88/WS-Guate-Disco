@@ -95,4 +95,18 @@ public class MyWebService {
         }
         return resultado;
     }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "getDisco")
+    public String getDisco(@WebParam(name = "idDisc") String idDisc) {
+        String result = null;
+        try {
+            Demo d = new Demo();
+            result = d.getDisco(idDisc);
+        } catch (Exception e) {
+        }
+        return result;
+    }
 }
